@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../dist/output.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Abril+Fatface&family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  
+  <!-- link external untuk nampilin sosial media  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+  <title>LUXE & LIGHT</title>
+</head>
+
+<body class="bg-gray-100 text-gray-900 font-sans">
+<body class="bg-pink-100">
+    <!-- ini navbar -->
+    <header class="bg-gray-200 py-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- logoo -->
+            <h1 class="text-3xl font-light tracking-widest text-black" style="font-family: 'Abril Fatface', sans-serif;">LUXE & LIGHT</h1>
+            <nav class="flex space-x-6 text-sm text-black" style="font-family: 'Poppins', sans-serif;">
+                <a href="#" class="hover:underline">Contact</a>
+                <a href="./landing.html" class="hover:underline">About</a>
+            </nav>
+
+            <!-- Right Icons -->
+            <div class="flex items-center space-x-6 text-white text-2xl relative">
+
+                <!-- Cart Icon -->
+                <a href="./cart.html" class="hover:text-black-600">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <!-- User Icon with Dropdown -->
+                <div class="relative">
+                    <button id="userDropdownButton" class="focus:outline-none hover:text-gray-400">
+                        <i class="fas fa-user-circle"></i>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div id="userDropdown" class="hidden absolute right-0 mt-2 w-48 bg-white border border-gray-300 rounded-md shadow-lg">
+                    <a href="login.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Login</a>
+                    <a href="register.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Register</a>
+                    </div>
+                    </div>
+
+                <!-- Heart Icon -->
+                <a href="#" class="hover:text-gray-400">
+                <i class="fas fa-heart"></i>
+                </a>
+                </div>
+                </div>
+    </header>
+
+    <script>
+        // Dropdown toggle functionality for user icon
+        const userDropdownButton = document.getElementById("userDropdownButton");
+        const userDropdown = document.getElementById("userDropdown");
+
+        userDropdownButton.addEventListener("click", () => {
+            userDropdown.classList.toggle("hidden");
+        });
+
+        // Close dropdown if clicked outside
+        window.addEventListener("click", (e) => {
+            if (!userDropdownButton.contains(e.target) && !userDropdown.contains(e.target)) {
+                userDropdown.classList.add("hidden");
+            }
+        });
+    </script>
+
+  <section class="bg-white">
+    <img src="../img/image 1 (1).png" alt="Elegant Jewelry Display" class="w-full object-cover" />
+  </section>
+
+  <section class="bg-gray-200 text-center py-10 px-4">
+    <h2 class="text-2xl md:text-3xl tracking-widest font-light" style="font-family: 'Aboreto', sans-serif;">MASTERS OF LIGHT SINCE 1993</h2>
+    <p class="mt-4 text-sm md:text-base max-w-2xl mx-auto" style="font-family: 'Aboreto', sans-serif;">
+      Since its beginnings, LUXE & LIGHT has redefined elegance with cutting-edge crystal designs and timeless craftsmanship, making every piece a statement of beauty.
+    </p>
+  </section>
+
+  <section class="py-12 px-6 text-center bg-white" style="font-family: 'Advent Pro', sans-serif;">
+    <h2 class="text-2xl md:text-3xl tracking-widest mb-10" style="font-family: 'Aboreto', sans-serif;">STYLING INSPIRATION</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- RINGS -->
+      <div>
+        <img src="../img/img1.png" alt="Gold Rings Collection" class="w-full h-auto object-cover" />
+        <h3 class="mt-6 text-lg tracking-widest" style="font-family: 'Aboreto', sans-serif;">RINGS</h3>
+        <p class="mt-2 text-sm leading-relaxed max-w-xs mx-auto">
+          Add a touch of glam to your hands with our delicately crafted rings that capture light and attention effortlessly.
+        </p>
+      </div>
+
+      <!-- EARRINGS -->
+      <div>
+        <img src="../img/img2.png" alt="Shimmering Earrings" class="w-full h-auto object-cover" />
+        <h3 class="mt-6 text-lg tracking-widest" style="font-family: 'Aboreto', sans-serif;">EARRINGS</h3>
+        <p class="mt-2 text-sm leading-relaxed max-w-xs mx-auto">
+          From studs to chandeliers, our earrings are made to sparkle at every angle — perfect for any occasion.
+        </p>
+      </div>
+
+      <!-- BRACELETS -->
+      <div>
+        <img src="../img/img3.png" alt="Luxury Bracelets" class="w-full h-auto object-cover" />
+        <h3 class="mt-6 text-lg tracking-widest" style="font-family: 'Aboreto', sans-serif;">BRACELETS</h3>
+        <p class="mt-2 text-sm leading-relaxed max-w-xs mx-auto">
+          Elegant and refined, these bracelets bring together timeless charm with contemporary design.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Product: DYNE -->
+  <section class="flex flex-col md:flex-row items-center bg-gray-200">
+    <div class="w-full md:w-1/2 p-10">
+      <h2 class="text-3xl tracking-widest mb-4" style="font-family: 'Aboreto', sans-serif;">DYNE</h2>
+      <p class="text-lg leading-relaxed tracking-wide" style="font-family: 'Advent Pro', sans-serif;">
+        The DYNE series combines sleek design with radiant brilliance, offering a bold yet refined aesthetic for modern wearers.
+      </p>
+    </div>
+    <div class="w-full md:w-1/2">
+      <img src="../img/img4 (tengah).png" alt="DYNE Ring Showcase" class="w-full h-auto object-cover" />
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-16">
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-semibold text-gray-800" style="font-family: 'Aboreto', sans-serif;">WORLD OF SWAROVSKI</h1>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="flex flex-col items-center">
+          <img src="../img/image 7.png" alt="Crystal Pendant" class="w-full h-auto object-cover rounded-lg shadow-lg" />
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="../img/image 8.png" alt="Luxury Necklace" class="w-full h-auto object-cover rounded-lg shadow-lg" />
+        </div>
+        <div class="flex flex-col items-center">
+          <img src="../img/image 9.png" alt="Elegant Brooch" class="w-full h-auto object-cover rounded-lg shadow-lg" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-200 border-t border-gray-100 py-8 px-4 relative">
+    <div class="max-w-7xl mx-auto flex flex-col items-center justify-center" style="font-family: 'Abril Fatface', sans-serif;">
+      <h1 class="text-6xl md:text-6xl tracking-widest text-blackl-700 mb-12">
+        LUXE <span class="font-light"> & </span> LIGHT
+      </h1>
+      <div class="w-full flex justify-between items-end mt-8">
+        <!-- Copyright -->
+        <div class="text-xs text-gray-600 max-w-xs" style="font-family: 'Advent Pro', sans-serif;">
+          Copyright © 2025 Swarovski Other Countries / Regions. All rights reserved.<br>
+          SWAROVSKI and the SWAN logo are registered and trademarks of Swarovski AG.
+        </div>
+        <!-- Social Icons -->
+        <div class="flex space-x-4 text-black-700 text-xl">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+<!-- flowbite js -->
+<script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+</html>

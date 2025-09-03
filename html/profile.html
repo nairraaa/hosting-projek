@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LUXE & LIGHT</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Header -->
+  <header class="bg-gray-300 text-center py-12">
+  <h1 class="text-5xl font-serif font-bold tracking-widest text-white">LUXE & LIGHT</h1>
+  </header>
+
+  <!-- Profile Section -->
+  <section class="max-w-4xl mx-auto px-4 py-10">
+    <h2 class="text-sm tracking-widest font-medium mb-8">PROFIL</h2>
+
+    <div class="space-y-6 text-sm">
+      <!-- Avatar -->
+      <div class="flex items-center space-x-4">
+        <div class="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center">
+          <svg class="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Nama -->
+      <div class="flex items-center space-x-3">
+        <i class="fas fa-user text-gray-400"></i>
+        <img src="../img/iconamoon_profile-thin.png" alt="ini profile" class="w-9 h-9" />
+        <span>Naira ghaisani</span>
+      </div>
+
+      <!-- Alamat -->
+      <div class="flex items-center space-x-3">
+        <i class="fas fa-map-marker-alt text-gray-400"></i>
+        <img src="../img/arcticons_mapsgeobookmarks.png" alt="" class="w-9 h-9" />
+        <span>Jl. Setu Golf 05/08</span>
+      </div>
+
+      <!-- Email -->
+      <div class="flex items-center space-x-3">
+        <i class="fas fa-envelope text-gray-400"></i>
+        <img src="../img/mdi-light_email.png" alt=""  class="w-9 h-9" />
+        <a href="mailto:ghaisanibalqis20@gmail.com" class="underline">ghaisanibalqis20@gmail.com</a>
+      </div>
+
+      <!-- Password -->
+      <div class="flex items-center space-x-3">
+        <i class="fas fa-eye-slash text-gray-400"></i>
+        <img src="../img/mdi-light_eye-off.png" alt=""  class="w-9 h-9" />
+        <span>••••••</span>
+      </div>
+
+      <!-- Delete Button -->
+      <button id="deleteBtn" class="border border-gray-400 px-4 py-1 rounded hover:bg-gray-100 transition">
+        Delete Account
+      </button>
+
+  <!-- Privacy Text -->
+  <div class="text-xs text-center text-gray-500 px-6 py-4">
+    Di LUXE & LIGHT, kami menjaga privasi Anda dengan sangat serius dan berkomitmen untuk melindungi data pribadi Anda. 
+    Pelajari lebih lanjut tentang cara kami merawat dan menggunakan data Anda di 
+    <a href="./profile.html" class="underline">Kebijakan Privasi</a>.
+  </div>
+
+  
+  <script>
+    document.getElementById("deleteBtn").addEventListener("click", function () {
+      alert("Account deleted");
+      window.location.href = "../html/home.html";
+    });
+  </script>
+</body>
+</html>

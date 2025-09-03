@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/> 
+  <link rel="preconnect" href="https://fonts.gstatic.com"  crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Abril+Fatface&family=Actor&family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body class="bg-neutral-300 min-h-screen">
+  <!-- Navbar -->
+  <header class="bg-neutral-300 border-b border-gray-300">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <span class="text-3xl text-white tracking-widest px-4" style="font-family: 'Abril Fatface', sans-serif;">
+          LUXE <span class="">& LIGHT</span>
+        </span>
+      </div>
+      <!-- Nav -->
+      <nav class="flex-grow flex justify-center ml-8" style="font-family: 'Poppins', sans-serif;">
+        <a href="#" class="hover:underline mx-4">Contact</a>
+        <a href="./landing.html" class="hover:underline mx-4">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Register Form -->
+  <main class="flex items-center justify-center mt-12">
+    <div class="bg-white w-full max-w-3xl shadow-md rounded-lg p-8">
+      <div class="text-center mb-6" style="font-family: 'Aboreto', sans-serif;">
+        <h2 class="text-3xl font-bold py-3">REGISTER</h2>
+        <p class="text-sm text-gray-500" style="font-family: 'Poppins', sans-serif;">We’ll recognize if you already have an account</p>
+      </div>
+      <form id="registerForm" class="max-w-md mx-auto">
+        <!-- First Name -->
+        <div class="">
+          <input type="text" id="firstName" placeholder="First Name"
+          class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
+        </div>
+        <!-- Last Name -->
+        <div class="">
+          <input type="text" id="lastName" placeholder="Last Name"
+          class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
+        </div>
+        <!-- Phone Number -->
+        <div class="">
+          <input type="number" id="phone" placeholder="Phone Number"
+          class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
+        </div>
+        <!-- Address -->
+        <div class="mb-4">
+          <input type="text" id="address" placeholder="Address Line"
+          class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
+        </div>
+        <!-- Password -->
+        <div class="mb-4">
+          <input type="password" id="password" placeholder="Password"
+          class="w-full px-4 py-2 mb-4 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
+        </div>
+        <!-- Privacy Policy -->
+        <p class="text-sm text-gray-500 mb-4" style="font-family:'Actor', sans-serif;">
+          By providing your personal information, you agreed to our
+          <a href="#" class="text-blue-500 underline hover:text-blue-700">Privacy & Cookies Policy</a>.
+        </p>
+        <!-- Newsletter Checkbox -->
+        <div class="flex items-center mb-4" style="font-family:'Actor', sans-serif;">
+          <input type="checkbox" id="agree" class="w-5 h-5 border border-gray-300 rounded-md text-gray-500 focus:ring-2 focus:ring-gray-400"/>
+          <label for="agree" class="ml-2 text-sm text-gray-700">
+            Yes, I would like to subscribe to the LUXE & LIGHT newsletter...
+          </label>
+        </div>
+        <!-- Submit Button -->
+        <button type="submit"
+          class="w-full bg-neutral-400 hover:bg-neutral-500 text-white font-bold py-2 rounded-md transition-colors">
+          Continue
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Mencegah reload halaman
+
+      // Validasi sederhana: cek apakah semua input diisi
+      const firstName = document.getElementById("firstName").value.trim();
+      const lastName = document.getElementById("lastName").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const password = document.getElementById("password").value.trim();
+
+      if (!firstName || !lastName || !phone || !address || !password) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      // Simulasikan registrasi sukses
+      alert("Registration successful!");
+      window.location.href = "home.html"; // Redirect ke halaman home
+    });
+  </script>
+</body>
+</html

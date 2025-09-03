@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxe & Light – Product Detail</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="min-h-screen bg-gray-300 text-gray-800">
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="bg-gray-300">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+      <!-- Brand -->
+      <h1 class="text-2xl font-bold tracking-widest text-white">LUXE & LIGHT</h1>
+
+      <!-- Nav links -->
+      <nav class="hidden gap-8 text-sm text-white md:flex">
+        <a href="#" class="hover:text-white">Contact</a>
+        <a href="./home.html" class="hover:text-white">Home</a>
+        <a href="landing.html" class="hover:text-white">About</a>
+      </nav>
+
+      <!-- Search + Cart -->
+      <div class="flex items-center gap-6">
+        <!-- Search -->
+        <div class="relative hidden md:block">
+          <input
+            type="text"
+            placeholder="What are you looking for?"
+            class="w-72 rounded-md border border-gray-200 bg-white py-1.5 pl-3 pr-10 text-sm placeholder-gray-500 focus:outline-none"
+          />
+          <i data-feather="search" class="absolute right-3 top-2.5 h-4 w-4 text-gray-500"></i>
+        </div>
+        <!-- Cart icon (dummy) -->
+        <a href="cart.html" class="text-white">
+          <i data-feather="shopping-cart" class="h-5 w-5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="mx-auto mt-8 max-w-6xl bg-white p-8 shadow-sm">
+    <div class="flex flex-col gap-10 md:flex-row">
+      <!-- Product image -->
+      <div class="flex-1">
+        <img
+          id="product-image"
+          src=""
+          alt="Product image"
+          class="mx-auto max-h-96 object-contain"
+        />
+      </div>
+
+      <!-- Product details -->
+      <div class="flex-1">
+        <h2 id="product-title" class="text-2xl font-semibold uppercase tracking-wide"></h2>
+
+        <!-- Rating & stock -->
+        <div class="mt-2 flex items-center gap-4 text-sm">
+          <div id="rating-stars" class="flex items-center gap-0.5 text-yellow-400"></div>
+          <span id="rating-count" class="text-gray-500"></span>
+          <span class="rounded bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700">In Stock</span>
+        </div>
+
+        <!-- Price -->
+        <p id="product-price" class="mt-4 text-2xl font-bold"></p>
+
+        <!-- Description -->
+        <p id="product-desc" class="mt-4 text-sm leading-relaxed text-gray-600"></p>
+
+        <!-- Quantity selector -->
+        <div class="mt-6 flex items-center gap-4">
+          <label class="text-sm font-medium">Quantity:</label>
+          <div class="inline-flex overflow-hidden rounded border">
+            <button id="btn-dec" type="button" class="w-8 bg-gray-200 text-xl font-semibold hover:bg-gray-300">–</button>
+            <input id="qty-input" type="text" value="1" readonly class="w-10 border-x text-center text-sm" />
+            <button id="btn-inc" type="button" class="w-8 bg-gray-200 text-xl font-semibold hover:bg-gray-300">+</button>
+          </div>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href="../html/checkout.html"></a>
+          <button id="buy-now" class="w-32 rounded bg-gray-500 py-2 text-sm font-medium text-white hover:bg-gray-600">Buy Now</button>
+          <button id="add-cart" class="w-32 rounded bg-gray-500 py-2 text-sm font-medium text-white hover:bg-gray-600">Add to Cart</button>
+        </div>
+
+        <!-- Delivery info -->
+        <div class="mt-8 divide-y rounded border">
+          <!-- Free delivery -->
+          <div class="flex items-start gap-3 px-4 py-4">
+            <i data-feather="truck" class="mt-0.5 h-5 w-5 text-gray-600"></i>
+            <div>
+              <p class="font-medium">Free Delivery</p>
+              <p class="text-xs text-gray-600">Enter your postal code for Delivery Availability</p>
+            </div>
+          </div>
+          <!-- Return delivery -->
+          <div class="flex items-start gap-3 px-4 py-4">
+            <i data-feather="refresh-ccw" class="mt-0.5 h-5 w-5 text-gray-600"></i>
+            <div>
+              <p class="font-medium">Return Delivery</p>
+              <p class="text-xs text-gray-600">Free 30 Days Delivery Returns. <a href="#" class="underline">Details</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== Feather Init & App Script ===== -->
+  <script>
+    feather.replace();
+  </script>
+  <script src="../script/detail.js"></script>
+</body>
+</html>

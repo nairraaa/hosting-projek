@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aboreto&family=Abril+Fatface&family=Advent+Pro:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  </head>
+  <body class="bg-neutral-300 min-h-screen">
+
+    <!-- Navbar -->
+    <header class="bg-neutral-300 border-b border-gray-300">
+
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-6">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <span
+            class="text-3xl text-white tracking-widest px-4"
+            style="font-family: 'Abril Fatface', sans-serif">
+            LUXE <span class="">& LIGHT</span>
+          </span>
+        </div>
+
+         <!-- Nav -->
+      <nav class="flex-grow flex justify-center ml-8" style="font-family: 'Poppins', sans-serif;">
+        <a href="#" class="hover:underline mx-4">Contact</a>   
+        <a href="./landing.html" class="hover:underline mx-4">About</a>
+      </nav>
+      </div>
+    </header>
+
+    <!-- Login Form -->
+    <main class="flex items-center justify-center mt-12">
+      <div class="bg-white w-full max-w-3xl shadow-md rounded-lg p-8">
+        <div
+          class="text-center mb-6"
+          style="font-family: 'Aboreto', sans-serif">
+          <h2 class="text-3xl font-bold py-3">LOGIN OR CREATE NEW ACCOUNT</h2>
+          <p
+            class="text-sm text-gray-500"
+            style="font-family: 'Poppins', sans-serif"
+          >
+            We’ll recognize if you already have an account
+          </p>
+        </div>
+        <form id="loginForm" class="max-w-md mx-auto">
+
+          <!-- Email -->
+          <div class="mb-4">
+            <input
+              type="email"
+              id="email"
+              placeholder="Email Address"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400"/>
+          </div>
+
+          <!-- Password -->
+          <div class="mb-4">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400" /></div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="w-full bg-neutral-400 hover:bg-neutral-500 text-white font-bold py-2 rounded-md transition-colors">
+            Continue
+          </button>
+        </form>
+      </div>
+    </main>
+
+    <!-- JavaScript -->
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Mencegah reload halaman
+
+          // Mengecek apakah email dan password diisi
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+
+          if (!email || !password) {
+            alert("Please fill in all fields.");
+            return;
+          }
+
+          // Alert login sukses
+          alert("Login successful!");
+          window.location.href = "home.html"; // Redirect ke halaman home
+        });
+    </script>
+  </body>
+</html>
